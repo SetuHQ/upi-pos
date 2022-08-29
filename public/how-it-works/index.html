@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        />
+        <title>How it works</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script type="text/javascript" src="../js/constants.js"></script>
+    </head>
+
+    <body>
+        <div class="login-dark" style="height: 695px">
+            <div class="wrapper">
+                <h3>Step 1 - Attach NFC</h3>
+                <p>
+                    Attach NFC tag to any place that you want to accept
+                    payments. In the video, NFC tag has been attached to the
+                    back of the book.
+                </p>
+
+                <video width="100%" height="300" autoplay loop muted>
+                    <source
+                        src="https://storage.googleapis.com/strapi-assets/upi-deeplinks-pos/attach-nfc.mp4"
+                        type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                </video>
+
+                <br />
+                <br />
+                <hr />
+
+                <h3>Step 2 - Generate payment link and write to NFC tag</h3>
+                <p>
+                    Merchant can generate a payment link with needed amount by
+                    visiting the page and write the generated link to the NFC
+                    tag.
+                </p>
+                <p>
+                    Place phone near the tag until it is detected and click
+                    Write to Tag to write data.
+                </p>
+
+                <video width="100%" height="500" autoplay loop muted>
+                    <source
+                        src="https://storage.googleapis.com/strapi-assets/upi-deeplinks-pos/write-nfc.mp4"
+                        type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                </video>
+
+                <br />
+                <br />
+                <hr />
+
+                <h3>Step 3 - Read NFC tag to make payment</h3>
+                <p>
+                    Customer can read the NFC tag by placing phone near the NFC
+                    tag to which the payment link has been written and make the
+                    payment.
+                </p>
+
+                <video width="100%" height="500" autoplay loop muted>
+                    <source
+                        src="https://storage.googleapis.com/strapi-assets/upi-deeplinks-pos/read-nfc.mp4"
+                        type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                </video>
+
+                <br />
+                <br />
+                <hr />
+
+                <div class="form-group">
+                    <a href="/" class="btn btn-primary btn-block"
+                        >Back to main page</a
+                    >
+                </div>
+                <div
+                    class="form-group"
+                    style="margin-top: 50px; margin-bottom: 0px"
+                >
+                    <h4 style="text-align: center">
+                        Powered by
+                        <img
+                            src="../logo.png"
+                            width="20%"
+                            style="margin-left: 5px"
+                        />
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        />
+        <title>Create link - UPI DL</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script type="text/javascript" src="../js/constants.js"></script>
+    </head>
+
+    <body>
+        <div class="login-dark" style="height: 695px">
+            <div class="wrapper">
+                <h3>Payment link generated!</h3>
+                <p>
+                    Write the generated payment link to the NFC tag for the
+                    customer to scan. Place your phone near the tag and press
+                    the button below after the tag is detected.
+                </p>
+                <div class="form-group">
+                    <code id="payment-link"></code>
+                </div>
+                <div
+                    class="alert alert-danger d-none"
+                    data-quiet-send-text-warning
+                ></div>
+                <div class="form-group d-none">
+                    <input
+                        type="text"
+                        data-quiet-text-input
+                        id="payment-link-url"
+                    />
+                </div>
+                <div class="form-group">
+                    <button
+                        class="btn btn-primary btn-block"
+                        id="writeButton"
+                        onclick="nfcWrite()"
+                    >
+                        Write to NFC tag
+                    </button>
+                </div>
+
+                <pre id="log"></pre>
+                <div
+                    class="form-group"
+                    style="margin-top: 50px; margin-bottom: 0px"
+                >
+                    <h4 style="text-align: center">
+                        Powered by
+                        <img
+                            src="../logo.png"
+                            width="20%"
+                            style="margin-left: 5px"
+                        />
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+        <script>
+            const params = new Proxy(
+                new URLSearchParams(window.location.search),
+                {
+                    get: (searchParams, prop) => searchParams.get(prop),
+                }
+            );
+            $("#payment-link").html(urls[params.env] + params.id);
+            let url = urls[params.env] + params.id;
+            $("#payment-link-url").val(params.env[0] + "-" + params.id);
+        </script>
+        <script src="./js/write-to-nfc.js"></script>
+    </body>
+</html>

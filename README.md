@@ -1,6 +1,6 @@
 # UPI Deeplinks POS via NFC
 
-POS application for accpeting payments using Setu UPI Deeplinks via NFC
+POS application for accepting payments using Setu UPI Deeplinks via NFC
 
 [Demo](https://setu-upi-over-nfc.herokuapp.com/how-it-works)
 

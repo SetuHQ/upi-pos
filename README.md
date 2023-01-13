@@ -12,6 +12,28 @@ Merchants can generate an UPI link with desired amount using this application an
 
 If you're looking to get NFC tags, you can check out [these](https://www.amazon.in/gp/product/B09BQBB69Q/).
 
+## How it works
+
+### Step 1 - Attach NFC
+
+Attach NFC tag to any place that you want to accept payments. In the video, NFC tag has been attached to the back of the book.
+
+https://user-images.githubusercontent.com/9695866/212429194-90b803fc-704e-42ed-9be8-1257b7febae9.mp4
+
+### Step 2 - Generate payment link and write to NFC tag
+
+Merchant can generate a payment link with needed amount by visiting the page and write the generated link to the NFC tag.
+
+Place phone near the tag until it is detected and click `Write to Tag` to write data
+
+https://user-images.githubusercontent.com/9695866/212429283-5b992d14-b034-41b8-9577-4c570df350f0.mp4
+
+### Step 3 - Read NFC tag to make payment
+
+Customer can read the NFC tag by placing phone near the NFC tag to which the payment link has been written and make the payment.
+
+https://user-images.githubusercontent.com/9695866/212429220-02f39ba5-f4d5-4992-97cc-76babb04db18.mp4
+
 ## How to
 
 ### Setup UPI Deeplink with Setu
